@@ -1,0 +1,15 @@
+# Ignorar archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignorar carpetas de dependencias
+node_modules/
+.netlify/
+
+# Ignorar archivos de editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

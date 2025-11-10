@@ -1,0 +1,11 @@
+# Configuración de Netlify para K&S Legal
+[build]
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
