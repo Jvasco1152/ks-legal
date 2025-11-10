@@ -263,7 +263,7 @@ scrollToTopButton.innerHTML = '↑';
 scrollToTopButton.className = 'scroll-to-top';
 scrollToTopButton.style.cssText = `
     position: fixed;
-    bottom: 30px;
+    bottom: 110px;
     right: 30px;
     width: 50px;
     height: 50px;
@@ -281,6 +281,24 @@ scrollToTopButton.style.cssText = `
 `;
 
 document.body.appendChild(scrollToTopButton);
+
+// Adjust position for mobile devices
+function adjustScrollButtonPosition() {
+    if (window.innerWidth <= 768) {
+        scrollToTopButton.style.bottom = '95px';
+        scrollToTopButton.style.right = '20px';
+        scrollToTopButton.style.width = '45px';
+        scrollToTopButton.style.height = '45px';
+    } else {
+        scrollToTopButton.style.bottom = '110px';
+        scrollToTopButton.style.right = '30px';
+        scrollToTopButton.style.width = '50px';
+        scrollToTopButton.style.height = '50px';
+    }
+}
+
+adjustScrollButtonPosition();
+window.addEventListener('resize', adjustScrollButtonPosition);
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 500) {
